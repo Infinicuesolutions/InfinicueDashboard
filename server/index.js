@@ -15,12 +15,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
-var url="http://192.168.100.40:8003";
+// var url="http://192.168.100.40:8003";
+var url="https://salvussequr.com";
+
 
 var x=0;
-var debitCount=4;
-var creditcount=6;
-var onlinecount=8;
+var debitCount=0;
+var creditcount=0;
+var onlinecount=0;
 var netcount=0;
 var debitgraph;
 var creditgraph;
@@ -103,7 +105,7 @@ app.get("/cd", (req, res) => {
 });
 
 request({
-  url: 'http://192.168.100.40:8003/Transaction/',
+  url: url+'/Transaction/',
   method: 'GET',
   headers: {
       'Type': "Debit Card",
