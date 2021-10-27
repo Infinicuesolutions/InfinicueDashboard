@@ -281,7 +281,7 @@ app.get("/apis", (req, res) => {
 
   
   app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server####!" });
+    res.json({ message: "Hello from server####@@@@@@@@@@@!" });
   });
 
   // All other GET requests not handled before will return our React app
