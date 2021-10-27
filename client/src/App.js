@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/api")
+    fetch("/debitcount")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
