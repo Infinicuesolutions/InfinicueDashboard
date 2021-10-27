@@ -79,7 +79,7 @@ export default function Dashboard() {
   useEffect(() => {
   
 
-    fetch("http://localhost:3001/api")
+    fetch("/api")
     .then((res) => res.json())
     .then((data) => {
       // debitCounts(data.message);
@@ -87,7 +87,7 @@ export default function Dashboard() {
     });
 
 
-    fetch("http://localhost:3001/debitgraph")
+    fetch("/debitgraph")
     .then((res) => res.json())
     .then((data) => {
       // netCounts(data.message);
@@ -101,7 +101,7 @@ export default function Dashboard() {
       // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###!!!!!!!!!!!!!!!!!!!:::" + data.message.AM12);
     });
 
-    fetch("http://localhost:3001/creditgraph")
+    fetch("/creditgraph")
     .then((res) => res.json())
     .then((data) => {
       // netCounts(data.message);
@@ -115,7 +115,7 @@ export default function Dashboard() {
       // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###!!!!!!!!!!!!!!!!!!!:::" + data.message.AM12);
     });
 
-    fetch("http://localhost:3001/netgraph")
+    fetch("/netgraph")
     .then((res) => res.json())
     .then((data) => {
       // netCounts(data.message);
@@ -135,28 +135,28 @@ export default function Dashboard() {
       console.log("Refresh");
 
 
-      fetch("http://localhost:3001/debitcount")
+      fetch("/debitcount")
     .then((res) => res.json())
     .then((data) => {
       debitCounts(data.message);
       // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###!!!!!!!!!!!!!!!!!!!:::" + data.message);
     });
 
-      fetch("http://localhost:3001/creditcount")
+      fetch("/creditcount")
       .then((res) => res.json())
       .then((data) => {
         creditCounts(data.message);
         // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###!!!!!!!!!!!!!!!!!!!:::" + data.message);
       });
 
-    fetch("http://localhost:3001/onlinecount")
+    fetch("/onlinecount")
     .then((res) => res.json())
     .then((data) => {
       onlinrCounts(data.message);
       // console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###!!!!!!!!!!!!!!!!!!!:::" + data.message);
     });
 
-    fetch("http://localhost:3001/netcount")
+    fetch("/netcount")
     .then((res) => res.json())
     .then((data) => {
       netCounts(data.message);
