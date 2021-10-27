@@ -18,9 +18,9 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 var url="http://192.168.100.40:8003";
 
 var x=0;
-var debitCount=0;
-var creditcount=0;
-var onlinecount=0;
+var debitCount=4;
+var creditcount=6;
+var onlinecount=8;
 var netcount=0;
 var debitgraph;
 var creditgraph;
